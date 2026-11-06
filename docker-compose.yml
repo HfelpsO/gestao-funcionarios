@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    container_name: gestao-funcionarios
+    ports:
+      - "8081:80"
+    volumes:
+      # Monta o projeto no container: salvou o arquivo, é só recarregar o navegador
+      - .:/usr/share/nginx/html:ro
